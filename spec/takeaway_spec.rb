@@ -12,4 +12,20 @@ describe TakeAway do
       expect(takeaway.display_menu).to eq dishes
     end
   end
+
+  describe '#order' do
+    let(:order) { double :order }
+    let(:item) {double :item}
+
+    it 'should respond to order method with 2 arguments' do
+      expect(takeaway).to respond_to(:order).with(2).arguments
+    end
+
+    xit 'should default to 1 item when no amount is given' do
+   
+    end
+  end
+  describe '#add' do
+
+  end
 end
