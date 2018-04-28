@@ -15,17 +15,16 @@ describe TakeAway do
 
   describe '#order' do
     let(:order) { double :order }
-    let(:item) {double :item}
+    let(:item) { double :item }
 
     it 'should respond to order method with 2 arguments' do
       expect(takeaway).to respond_to(:order).with(2).arguments
     end
-
-    xit 'should default to 1 item when no amount is given' do
-   
-    end
   end
-  describe '#add' do
 
+  describe '#add' do
+    it 'should respond to add method with 2 arguments' do
+      expect(takeaway).to respond_to(:add).with(2).arguments
+    end
   end
 end

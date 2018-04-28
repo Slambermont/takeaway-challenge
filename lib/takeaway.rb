@@ -1,4 +1,5 @@
-require './lib/menu.rb'
+require_relative 'menu'
+require_relative 'order'
 
 class TakeAway
 
@@ -12,8 +13,12 @@ class TakeAway
     menu.dishes
   end
 
-  def order(item, quantity)
+  def order(item, quantity = 1)
     @order.new_order(item, quantity)
+  end
+
+  def add(item, quantity = 1)
+    @order.add_item(item, quantity)
   end
 
 end
