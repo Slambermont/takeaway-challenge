@@ -10,4 +10,8 @@ class Menu
       'Beef Kimchee Dumplings' => 5,
     }
   end
+
+  # def in_menu?(item)
+  #   @dishes.key?(item.downcase.capitalize)
+  # end
 end

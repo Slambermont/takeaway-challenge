@@ -7,10 +7,15 @@ class Order
 
   def new_order(item, quantity = 1)
     @basket = {}
-    @basket[item] = quantity
+    @basket[item.downcase.capitalize] = quantity
   end
 
   def add_item(item, quantity = 1)
-    @basket[item] = quantity
+    if @basket.key?(item.downcase.capitalize)
+      @basket[item.downcase.capitalize] = @basket[item.downcase.capitalize]+quantity
+    else
+    @basket[item.downcase.capitalize] = quantity
+    end
   end
+
 end
